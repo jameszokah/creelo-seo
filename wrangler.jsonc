@@ -7,13 +7,9 @@
   "observability": {
     "enabled": true,
   },
-  // Uncomment when deploying to the openseo.so Cloudflare account. Self-hosters
-  // should leave this commented (or replace with their own zone) — otherwise
-  // `wrangler deploy` fails with "Could not find zone for app.openseo.so".
-  // "routes": [
-  //   { "pattern": "app.openseo.so", "custom_domain": true },
-  //   { "pattern": "www.app.openseo.so", "custom_domain": true },
-  // ],
+  "routes": [{ "pattern": "seo.creelo.app", "custom_domain": true }],
+  "workers_dev": false,
+  "preview_urls": false,
   "workflows": [
     {
       "name": "site-audit-workflow",
